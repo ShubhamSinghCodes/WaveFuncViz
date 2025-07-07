@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Orbital Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Atomic Orbital Viewer</h1>
+        <h3 class="creator-info">Made by Shubham Singh - Check this project out on <a href="https://github.com/ShubhamSinghCodes/WaveFuncViz" target="_blank">GitHub</a></h3>
+        <div class="controls">
+            <div class="input-group">
+                <label for="n">n:</label>
+                <input type="number" id="n" value="3" min="1">
+            </div>
+            <div class="input-group">
+                <label for="l">l:</label>
+                <input type="number" id="l" value="2" min="0">
+            </div>
+            <div class="input-group">
+                <label for="m">m:</label>
+                <input type="number" id="m" value="1">
+            </div>
+            <button id="plotButton">Visualize</button>
+        </div>
+        <div class="toggles">
+            <div class="toggle-switch">
+                <span>Points</span>
+                <label class="switch">
+                    <input type="checkbox" id="viewToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>Isosurface</span>
+            </div>
+        </div>
+
+        <div id="plot"></div>
+        <div class="info">
+            <h2 id="orbitalName"></h2>
+            <div id="wavefunction"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-2.33.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@13.0.0/lib/browser/math.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
